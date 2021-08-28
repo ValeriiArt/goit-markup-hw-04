@@ -12,30 +12,26 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-p {
+p,
+ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
+  list-style-type: none;
   padding-left: 0;
+  font-size: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.item {
-  list-style-type: none;
-}
-.link {
-  text-decoration: none;
-}
-.reset {
+address {
   font-style: normal;
 }
 /* Скивает заголовки, которых нет в макете */
@@ -79,6 +75,14 @@ img {
   margin-bottom: 20px;
   color: #ffffff;
 }
+.secondary-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
 .btn {
   display: block;
   font-weight: 700;
@@ -98,8 +102,8 @@ img {
 }
 .btn-main:hover,
 .btn-main:focus {
-  background-color: #fff;
-  color: var(--decorative-color-text);
+  background-color: #188ce8;
+  color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -136,10 +140,8 @@ img {
   margin-right: 50px;
 }
 .nav-link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -162,16 +164,31 @@ img {
 .nav-contact .nav-cont-item + .nav-cont-item {
   margin-left: 50px;
 }
+.nav-cont-item {
+  display: flex;
+}
 .nav-cont-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+}
+.nav-icon-mail {
+  fill: currentColor;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.nav-icon-tel {
+  fill: currentColor;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 /* -------------END.HEADER--------------- */
@@ -212,10 +229,10 @@ img {
   margin-right: 30px;
 }
 .features-cart {
-  width: 270px;
-  height: 120px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
-  padding: 25px 100px;
+  padding: 25px 0;
   background: #f5f4fa;
   border-radius: 4px;
 }
@@ -242,14 +259,6 @@ img {
 .work-section {
   padding-top: 0;
 }
-.our-work-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
 .our-work-list {
   display: flex;
 }
@@ -260,14 +269,6 @@ img {
 /* ------------Section our team --------------*/
 .our-team {
   background-color: #f5f4fa;
-}
-.our-team-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-align: center;
 }
 .team-list {
   display: flex;
@@ -294,51 +295,63 @@ img {
   letter-spacing: 0.03em;
 }
 .team-text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--main-color-text);
 }
+.social-item-team:not(:last-child) {
+  margin-right: 10px;
+}
+.social-list-team {
+  display: flex;
+  justify-content: center;
+}
+.social-link-team {
+  padding: 12px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+.social-link-team:hover,
+.social-link-team:focus {
+  border-radius: 50%;
+  background-color: var(--decorative-color-text);
+  color: #fff;
+}
+.icon-social-team {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
 /* ---------End.Section our team -------------*/
 /* ------------Section Clients--------------- */
-.client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
 .client-list {
   display: flex;
 }
 .client-link {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 170px;
-  height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
-  cursor: pointer;
-  padding: 16px 32px;
-  fill: #afb1b8;
+  padding: 16px 0;
+  color: #afb1b8;
 }
 .client-item:not(:last-child) {
   margin-right: 30px;
 }
 .icon-client {
+  fill: currentColor;
   width: 106px;
   height: 60px;
 }
 .client-link:focus,
 .client-link:hover {
   border: 1px solid var(--decorative-color-text);
-  fill: var(--decorative-color-text);
+  color: var(--decorative-color-text);
 }
-/* .icon-client:hover,
-.icon-client:focus {
-  fill: var(--decorative-color-text);
-} */
 
 /* ---------End.Section Clients-------------- */
 /* ----------------FOOTER-------------------- */
@@ -346,7 +359,50 @@ img {
   background-color: #2f303a;
   padding: 60px 0;
 }
+/* ----------footer cocial------- */
+.footer-list {
+  display: flex;
+}
 .footer-item:not(:last-child) {
+  margin-right: 70px;
+}
+.footer-social {
+  padding-top: 12px;
+}
+.footer-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.social-item-footer:not(:last-child) {
+  margin-right: 10px;
+}
+.social-list-footer {
+  display: flex;
+  justify-content: center;
+}
+.social-link-footer {
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+  border-radius: 50%;
+  background-color: var(--decorative-color-text);
+}
+.icon-social-footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+/* ----------END.footer cocial------- */
+.address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .location {
@@ -386,8 +442,8 @@ img {
   margin-left: 30px;
   margin-bottom: 30px;
 }
-.gallery-item:hover,
-.gallery-item:focus {
+.gallery-link:hover,
+.gallery-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
