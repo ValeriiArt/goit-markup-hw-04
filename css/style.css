@@ -331,12 +331,13 @@ address {
 }
 .client-link {
   display: flex;
-  justify-content: center;
   width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 16px 0;
   color: #afb1b8;
 }
 .client-item:not(:last-child) {
