@@ -363,12 +363,10 @@ address {
 /* ----------footer cocial------- */
 .footer-list {
   display: flex;
+  align-items: baseline;
 }
 .footer-item:not(:last-child) {
   margin-right: 70px;
-}
-.footer-social {
-  padding-top: 12px;
 }
 .footer-title {
   margin-bottom: 20px;
